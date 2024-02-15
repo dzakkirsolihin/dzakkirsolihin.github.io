@@ -1,4 +1,8 @@
-#services img {
+#skill img {
     display: flex;
     height: 13em;
+}
+.col-md{
+    display: flex;
+    height: 27em;
 }
