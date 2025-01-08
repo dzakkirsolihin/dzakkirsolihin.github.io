@@ -12,8 +12,8 @@ const ContactSection = () => {
     {
       icon: Phone,
       title: "Phone",
-      value: "+6289638722970",
-      link: "tel:+6289638722970"
+      value: "+6285161115013",
+      link: "tel:+6285161115013"
     },
     {
       icon: MapPin,
@@ -33,63 +33,75 @@ const ContactSection = () => {
       icon: Linkedin,
       url: "https://linkedin.com/in/muhammad-dzakkir-kilman-solihin-8b0387193",
       name: "LinkedIn"
-    },
-    // {
-    //   icon: Twitter,
-    //   url: "https://twitter.com/yourusername",
-    //   name: "Twitter"
-    // }
+    }
   ];
 
   return (
     <section id="contact" className="py-20 bg-gray-800">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Get In Touch</h2>
-          <div className="w-24 h-1 bg-blue-500 mx-auto"></div>
+        <div className="text-center mb-16 group" data-aos="fade-down">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 relative inline-block">
+                    Get In Touch
+                    <div className="mt-1"></div>
+                    <div className="absolute mx-auto left-1/2 -translate-x-1/2 bottom-0 w-0 h-1 bg-blue-500 group-hover:w-full transition-all duration-300 ease-out shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]"></div>
+                </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div>
+          <div data-aos="fade-right">
             <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
             <div className="space-y-4">
               {contactInfo.map((info, index) => (
                 <a
                   key={index}
                   href={info.link}
-                  className="flex items-center p-4 bg-gray-900 rounded-lg hover:bg-gray-700 transition-colors duration-300"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 200}
+                  className="flex items-center p-4 bg-gray-900 rounded-lg hover:bg-gray-700 transition-all duration-300 group hover:scale-105 transform"
                 >
-                  <info.icon className="w-6 h-6 text-blue-500 mr-4" />
+                  <info.icon className="w-6 h-6 text-blue-500 mr-4 group-hover:scale-110 transition-transform duration-300" />
                   <div>
-                    <h4 className="text-white font-medium">{info.title}</h4>
-                    <p className="text-gray-400">{info.value}</p>
+                    <h4 className="text-white font-medium group-hover:text-blue-500 transition-colors duration-300">
+                      {info.title}
+                    </h4>
+                    <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                      {info.value}
+                    </p>
                   </div>
                 </a>
               ))}
             </div>
           </div>
 
-          <div>
+          <div data-aos="fade-left">
             <h3 className="text-2xl font-bold text-white mb-6">Send Message</h3>
             <form className="space-y-4">
               <input
                 type="text"
                 placeholder="Your Name"
-                className="w-full p-3 bg-gray-900 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                data-aos="fade-left"
+                data-aos-delay="200"
+                className="w-full p-3 bg-gray-900 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 hover:bg-gray-700 focus:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]"
               />
               <input
                 type="email"
                 placeholder="Your Email"
-                className="w-full p-3 bg-gray-900 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                data-aos="fade-left"
+                data-aos-delay="400"
+                className="w-full p-3 bg-gray-900 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 hover:bg-gray-700 focus:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]"
               />
               <textarea
                 placeholder="Your Message"
                 rows="4"
-                className="w-full p-3 bg-gray-900 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                data-aos="fade-left"
+                data-aos-delay="600"
+                className="w-full p-3 bg-gray-900 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 hover:bg-gray-700 focus:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]"
               />
               <button
                 type="submit"
-                className="w-full py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-300"
+                data-aos="fade-up"
+                data-aos-delay="800"
+                className="w-full py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all duration-300 transform hover:scale-105"
               >
                 Send Message
               </button>
@@ -97,12 +109,16 @@ const ContactSection = () => {
           </div>
         </div>
 
-        <div className="flex justify-center space-x-6">
+        <div 
+          className="flex justify-center space-x-6" 
+          data-aos="fade-up"
+          data-aos-delay="1000"
+        >
           {socialLinks.map((social, index) => (
             <a
               key={index}
               href={social.url}
-              className="text-gray-400 hover:text-white transition-colors duration-300"
+              className="text-gray-400 hover:text-white transition-all duration-300 hover:scale-125 transform"
               target="_blank"
               rel="noopener noreferrer"
             >

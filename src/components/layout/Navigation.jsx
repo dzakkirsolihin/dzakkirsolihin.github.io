@@ -24,14 +24,14 @@ const Navigation = () => {
   return (
     <>
       <nav className={`fixed top-6 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 
-        ${isScrolled ? 'bg-gray-800/80 backdrop-blur-lg' : 'bg-gray-800'} 
-        rounded-full px-6 py-3`}>
+        ${isScrolled ? 'bg-gray-800/60 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]' : 'bg-gray-800/80 backdrop-blur-md'} 
+        rounded-full px-6 py-3 border border-gray-700/50 hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.5)]`}>
         <div className="hidden md:flex items-center space-x-8">
           {navigation.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
+              className="flex items-center space-x-2 text-gray-300 hover:text-white transition-all duration-200 hover:scale-105"
             >
               <item.icon className="w-5 h-5" />
               <span>{item.name}</span>
@@ -48,7 +48,7 @@ const Navigation = () => {
       </nav>
 
       {isMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-gray-900/95 md:hidden">
+        <div className="fixed inset-0 z-40 bg-gray-900/90 backdrop-blur-lg md:hidden">
           <div className="flex flex-col items-center justify-center h-full space-y-8">
             {navigation.map((item) => (
               <a
