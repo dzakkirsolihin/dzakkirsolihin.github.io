@@ -8,7 +8,7 @@ const HeroSection = () => {
         {/* Profile Image with Animation */}
         <div className="mb-8" data-aos="fade-down">
           <img 
-            src="/src/assets/images/profile.png"
+            src="/public/profile.png"
             alt="Profile"
             className="w-40 h-40 rounded-full mx-auto border-4 border-blue-500 shadow-lg hover:scale-110 transition-transform duration-300"
           />
