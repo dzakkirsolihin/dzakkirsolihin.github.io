@@ -14,7 +14,7 @@ const Navigation = () => {
   }, []);
 
   const navigation = [
-    { name: 'Home', icon: Home, href: '#home' },
+    { name: 'Home', icon: Home, href: '/' },
     { name: 'About', icon: User, href: '#about' },
     { name: 'Projects', icon: Code, href: '#projects' },
     { name: 'Skills', icon: Settings, href: '#skills' },

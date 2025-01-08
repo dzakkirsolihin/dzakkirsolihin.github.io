@@ -8,15 +8,17 @@ import ContactSection from './components/sections/ContactSection';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Navigation />
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <ProjectSection />
-        <SkillSection />
-        <ContactSection />
-      </main>
+    <div className="relative overflow-hidden w-full">
+      <div className="min-h-screen bg-gray-900 text-white relative">
+        <Navigation />
+        <main className="relative">
+          <HeroSection />
+          <AboutSection />
+          <ProjectSection />
+          <SkillSection />
+          <ContactSection />
+        </main>
+      </div>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail, Download } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-b from-gray-900 to-gray-800">
+    <section id="home" className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-b from-gray-900 to-gray-800 relative overflow-hidden">
       <div className="max-w-6xl mx-auto text-center">
         {/* Profile Image with Animation */}
         <div className="mb-8" data-aos="fade-down">

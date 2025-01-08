@@ -80,7 +80,7 @@ const SkillSection = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gray-900" ref={sectionRef}>
+    <section id="skills" className="py-20 bg-gray-900 relative overflow-hidden" ref={sectionRef}>
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16 group" data-aos="fade-down">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 relative inline-block">
