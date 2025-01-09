@@ -1,25 +1,17 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Code, Server, Palette, Terminal } from 'lucide-react';
-import AOS from 'aos';
 
 const SkillSection = () => {
   const [animated, setAnimated] = useState(false);
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-      mirror: false
-    });
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // Delay the progress bar animation to start after AOS animation
           setTimeout(() => {
             setAnimated(true);
-          }, 1200); // AOS duration (800ms) + extra delay (400ms)
+          }, 1200);
         }
       },
       { threshold: 0.1 }
@@ -80,8 +72,21 @@ const SkillSection = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gray-900 relative overflow-hidden" ref={sectionRef}>
-      <div className="max-w-6xl mx-auto px-4">
+    <section id="skills" className="py-20 relative overflow-hidden" ref={sectionRef}>
+      {/* Background elements with blur */}
+      <div className="absolute inset-0">
+        {/* Gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900 to-gray-800"></div>
+        
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full"></div>
+        
+        {/* Blur overlay */}
+        <div className="absolute inset-0 backdrop-blur-3xl bg-gray-900/50"></div>
+      </div>
+
+      <div className="max-w-6xl mx-auto px-4 relative">
         <div className="text-center mb-16 group" data-aos="fade-down">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 relative inline-block">
             Skills & Technologies
@@ -94,7 +99,7 @@ const SkillSection = () => {
           {skillCategories.map((category, index) => (
             <div 
               key={index} 
-              className="bg-gray-800 p-6 rounded-lg"
+              className="bg-gray-800/50 backdrop-blur-lg p-6 rounded-lg"
               data-aos="fade-up"
               data-aos-delay={index * 200}
               data-aos-duration="800"
@@ -117,7 +122,7 @@ const SkillSection = () => {
                       <span className="text-gray-300">{skill.name}</span>
                       <span className="text-gray-400">{skill.level}%</span>
                     </div>
-                    <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                    <div className="w-full bg-gray-700/50 backdrop-blur-sm rounded-full h-2 overflow-hidden">
                       <div 
                         className="bg-blue-500 h-2 rounded-full transition-all duration-1000 ease-out"
                         style={{ 

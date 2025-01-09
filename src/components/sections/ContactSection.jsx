@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin } from 'lucide-react';
 
 const ContactSection = () => {
   const contactInfo = [
@@ -37,14 +37,27 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gray-800 relative overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4">
+    <section id="contact" className="py-20 relative overflow-hidden">
+      {/* Background elements with blur */}
+      <div className="absolute inset-0">
+        {/* Gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-800 to-gray-900"></div>
+        
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full"></div>
+        
+        {/* Blur overlay */}
+        <div className="absolute inset-0 backdrop-blur-3xl bg-gray-800/50"></div>
+      </div>
+
+      <div className="max-w-6xl mx-auto px-4 relative">
         <div className="text-center mb-16 group" data-aos="fade-down">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 relative inline-block">
-                    Get In Touch
-                    <div className="mt-1"></div>
-                    <div className="absolute mx-auto left-1/2 -translate-x-1/2 bottom-0 w-0 h-1 bg-blue-500 group-hover:w-full transition-all duration-300 ease-out shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]"></div>
-                </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 relative inline-block">
+            Get In Touch
+            <div className="mt-1"></div>
+            <div className="absolute mx-auto left-1/2 -translate-x-1/2 bottom-0 w-0 h-1 bg-blue-500 group-hover:w-full transition-all duration-300 ease-out shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]"></div>
+          </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
@@ -57,14 +70,14 @@ const ContactSection = () => {
                   href={info.link}
                   data-aos="fade-up"
                   data-aos-delay={index * 200}
-                  className="flex items-center p-4 bg-gray-900 rounded-lg hover:bg-gray-700 transition-all duration-300 group hover:scale-105 transform"
+                  className="flex items-center p-4 bg-gray-900/50 backdrop-blur-lg rounded-lg hover:bg-gray-700/50 transition-all duration-300 group hover:scale-105 transform"
                 >
                   <info.icon className="w-6 h-6 text-blue-500 mr-4 group-hover:scale-110 transition-transform duration-300" />
                   <div>
                     <h4 className="text-white font-medium group-hover:text-blue-500 transition-colors duration-300">
                       {info.title}
                     </h4>
-                    <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                    <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
                       {info.value}
                     </p>
                   </div>
@@ -81,21 +94,21 @@ const ContactSection = () => {
                 placeholder="Your Name"
                 data-aos="fade-left"
                 data-aos-delay="200"
-                className="w-full p-3 bg-gray-900 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 hover:bg-gray-700 focus:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]"
+                className="w-full p-3 bg-gray-900/50 backdrop-blur-lg rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 hover:bg-gray-700/50 focus:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]"
               />
               <input
                 type="email"
                 placeholder="Your Email"
                 data-aos="fade-left"
                 data-aos-delay="400"
-                className="w-full p-3 bg-gray-900 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 hover:bg-gray-700 focus:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]"
+                className="w-full p-3 bg-gray-900/50 backdrop-blur-lg rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 hover:bg-gray-700/50 focus:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]"
               />
               <textarea
                 placeholder="Your Message"
                 rows="4"
                 data-aos="fade-left"
                 data-aos-delay="600"
-                className="w-full p-3 bg-gray-900 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 hover:bg-gray-700 focus:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]"
+                className="w-full p-3 bg-gray-900/50 backdrop-blur-lg rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 hover:bg-gray-700/50 focus:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]"
               />
               <button
                 type="submit"
