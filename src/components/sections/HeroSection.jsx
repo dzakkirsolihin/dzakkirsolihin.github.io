@@ -1,5 +1,6 @@
 import React from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
+import profileImg from '../../assets/images/profile.png'
 
 const HeroSection = () => {
   return (
@@ -24,7 +25,7 @@ const HeroSection = () => {
           <div className="relative w-40 h-40 mx-auto">
             <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-md animate-pulse"></div>
             <img 
-              src="/src/assets/images/profile.png"
+              src={profileImg}
               alt="Profile"
               className="relative w-40 h-40 rounded-full mx-auto border-4 border-blue-500 shadow-lg hover:scale-110 transition-transform duration-300 object-cover"
             />
