@@ -1,33 +1,33 @@
 import React from 'react';
-import { Code, Palette, Database, Book } from 'lucide-react';
+import { Code, Database, Layout, Book, FileCode } from 'lucide-react';
 
 const AboutSection = () => {
   const interests = [
     {
       icon: Code,
-      title: 'Frontend Development',
-      description: 'Building beautiful and responsive user interfaces using modern frameworks.'
+      title: 'Web Development',
+      description: 'Building responsive and modern web applications with focus on user experience.'
     },
     {
       icon: Database,
-      title: 'Backend Development',
-      description: 'Designing scalable server-side applications and APIs.'
+      title: 'Desktop Development',
+      description: 'Creating desktop applications using Java and C++ with focus on performance.'
     },
     {
-      icon: Palette,
+      icon: Layout,
       title: 'UI/UX Design',
-      description: 'Creating intuitive and engaging user experiences.'
+      description: 'Designing intuitive and visually appealing user interfaces.'
     },
     {
-      icon: Book,
-      title: 'Continuous Learning',
-      description: 'Always excited to learn new technologies and best practices.'
+      icon: FileCode,
+      title: 'Software Development',
+      description: 'Creating comprehensive software requirements and UML diagrams for modeling.'
     }
   ];
 
   return (
     <section id="about" className="py-20 relative overflow-hidden">
-      {/* Background elements that will be blurred */}
+      {/* Background elements with blur */}
       <div className="absolute inset-0">
         {/* Gradient background */}
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900 to-gray-800"></div>
@@ -54,16 +54,14 @@ const AboutSection = () => {
           <div data-aos="fade-right" className="bg-gray-800/50 backdrop-blur-lg p-6 rounded-lg">
             <h3 className="text-2xl font-semibold text-white mb-4">Who am I?</h3>
             <p className="text-gray-400 leading-relaxed">
-              A software engineering student with proficiency in web application development, programming algorithms, and UI/UX design. Experience in C++ and Java, including desktop application development. Expertise in UI/UX design, software construction, quality assurance, project management, and information assurance. Interest in mobile application development, integrating user experiences with advanced technologies.
+              I am a dedicated software engineering student with a strong foundation in web application development, programming algorithms, and UI/UX design. In my first three semesters, I gained proficiency in C++ for algorithmic problem-solving and Java for object-oriented programming, culminating in the development of a simple desktop application.
             </p>
           </div>
           
           <div data-aos="fade-left" className="bg-gray-800/50 backdrop-blur-lg p-6 rounded-lg">
             <h3 className="text-2xl font-semibold text-white mb-4">What drives me?</h3>
             <p className="text-gray-400 leading-relaxed">
-              I'm driven by the desire to create meaningful solutions that make a positive impact. 
-              Whether it's developing user-friendly interfaces or optimizing backend systems, 
-              I always strive for excellence and continuous improvement.
+              With a foundational knowledge of machine learning and software architecture, I am currently highly interested in pursuing mobile application development, aiming to integrate seamless user experiences with cutting-edge technologies. My passion lies in creating intuitive and visually appealing user interfaces while ensuring robust backend functionality.
             </p>
           </div>
         </div>

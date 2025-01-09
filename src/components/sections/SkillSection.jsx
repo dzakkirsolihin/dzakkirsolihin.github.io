@@ -33,40 +33,50 @@ const SkillSection = () => {
       title: "Frontend Development",
       icon: Code,
       skills: [
-        { name: "HTML/CSS", level: 90 },
-        { name: "JavaScript", level: 85 },
-        { name: "React.js", level: 80 },
-        { name: "Tailwind CSS", level: 85 }
+        { name: "HTML5", level: 85 },
+        { name: "CSS3", level: 80 },
+        { name: "JavaScript", level: 75 },
+        { name: "Figma", level: 70 }
       ]
     },
     {
       title: "Backend Development",
       icon: Server,
       skills: [
-        { name: "Node.js", level: 75 },
+        { name: "PHP", level: 75 },
         { name: "Python", level: 80 },
-        { name: "MySQL", level: 70 },
-        { name: "MongoDB", level: 65 }
+        { name: "MySQL", level: 75 },
+        { name: "Java", level: 75 }
+      ]
+    },
+    {
+      title: "Frameworks",
+      icon: Code,
+      skills: [
+        { name: "Laravel", level: 70 },
+        { name: "React.js", level: 75 },
+        { name: "Node.js", level: 70 },
+        { name: "Express.js", level: 65 }
       ]
     },
     {
       title: "Design Tools",
       icon: Palette,
       skills: [
-        { name: "Figma", level: 75 },
-        { name: "Adobe XD", level: 70 },
-        { name: "Photoshop", level: 65 },
-        { name: "Illustrator", level: 60 }
+        { name: "UI Design", level: 75 },
+        { name: "UX Design", level: 70 },
+        { name: "Software Architecture", level: 65 },
+        { name: "UML Diagrams", level: 70 }
       ]
     },
     {
-      title: "Other Tools",
+      title: "Development Tools",
       icon: Terminal,
       skills: [
-        { name: "Git", level: 85 },
-        { name: "Docker", level: 70 },
-        { name: "Linux", level: 75 },
-        { name: "VS Code", level: 90 }
+        { name: "Git", level: 75 },
+        { name: "Software Development", level: 75 },
+        { name: "Algorithms", level: 70 },
+        { name: "Project Management", level: 65 }
       ]
     }
   ];
@@ -113,7 +123,6 @@ const SkillSection = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <div 
                     key={skillIndex}
-                    className="opacity-0"
                     data-aos="fade-right"
                     data-aos-delay={index * 200 + skillIndex * 100}
                     data-aos-duration="600"

@@ -35,7 +35,16 @@ const HeroSection = () => {
         {/* Name and Title with Animation */}
         <div className="space-y-4 mb-8" data-aos="fade-up" data-aos-delay="200">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white">
-            {"Hello, I'm ".split('').map((char, index) => (
+            {"Hello, ".split('').map((char, index) => (
+              <span 
+                key={index} 
+                className="inline-block hover:text-blue-500 hover:-translate-y-2 transition-all duration-300 cursor-default"
+              >
+                {char}
+              </span>
+            ))}
+            <span className='p-2'></span>
+            {"I'm ".split('').map((char, index) => (
               <span 
                 key={index} 
                 className="inline-block hover:text-blue-500 hover:-translate-y-2 transition-all duration-300 cursor-default"
@@ -44,23 +53,26 @@ const HeroSection = () => {
               </span>
             ))}
             <br />
-            {"Muhammad ".split('').map((char, index) => (
-              <span 
-                key={`first-${index}`}
-                className="inline-block text-blue-500 hover:text-white hover:-translate-y-2 transition-all duration-300 cursor-default"
-              >
-                {char}
-              </span>
-            ))}
-            <span></span>
-            {"Dzakkir".split('').map((char, index) => (
-              <span 
-                key={`last-${index}`}
-                className="inline-block text-blue-500 hover:text-white hover:-translate-y-2 transition-all duration-300 cursor-default"
-              >
-                {char}
-              </span>
-            ))}
+            <div className="inline">
+              {"Muhammad ".split('').map((char, index) => (
+                <span 
+                  key={`first-${index}`}
+                  className="inline-block text-blue-500 hover:text-white hover:-translate-y-2 transition-all duration-300 cursor-default"
+                >
+                  {char}
+                </span>
+              ))}
+              <span className='p-2'></span>
+              <span className="hidden max-[495px]:block"></span>
+              {"Dzakkir".split('').map((char, index) => (
+                <span 
+                  key={`last-${index}`}
+                  className="inline-block text-blue-500 hover:text-white hover:-translate-y-2 transition-all duration-300 cursor-default"
+                >
+                  {char}
+                </span>
+              ))}
+            </div>
           </h1>
           <h2 className="text-xl md:text-2xl text-gray-300" data-aos="fade-up" data-aos-delay="400">
             Software Engineering Student at Universitas Pendidikan Indonesia

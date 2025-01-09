@@ -1,5 +1,9 @@
 import React from 'react';
 import { Github, ExternalLink } from 'lucide-react';
+import { getImagePath } from '../../utils/imageUtils';
+
+// Dalam komponen:
+// <img src={getImagePath('profile/profile.png')} alt="Profile" />
 
 const ProjectSection = () => {
   const projects = [
