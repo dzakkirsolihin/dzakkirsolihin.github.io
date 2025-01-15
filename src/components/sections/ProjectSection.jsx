@@ -33,7 +33,7 @@ const ProjectSection = () => {
     },
     {
       title: "Klasifikasi Tipe Investor",
-      description: "A third impressive project. Highlight the key features and technical challenges overcome.",
+      description: "an investor type classification program based on financial attributes using k-NN learning algorithm.",
       image: "images/projects/klasifikasi-tipe-investor.png",
       tech: ["Python", "k-NN algorithm"],
       // demoLink: "#",
@@ -41,7 +41,7 @@ const ProjectSection = () => {
     },
     {
       title: "Sensus Penduduk",
-      description: "A third impressive project. Highlight the key features and technical challenges overcome.",
+      description: "C++ program to collect population data.",
       image: "images/projects/sensus-penduduk.png",
       tech: ["C++", "Git"],
       // demoLink: "#",
@@ -49,7 +49,7 @@ const ProjectSection = () => {
     },
     {
       title: "UI Design NeuroScan",
-      description: "A third impressive project. Highlight the key features and technical challenges overcome.",
+      description: "Designed an intuitive UI/UX for the face matching feature of the NeuroScan app that combines aesthetics and functionality.",
       image: "images/projects/neuroscan-face-recognition.png",
       tech: ["Figma"],
       // demoLink: "#",

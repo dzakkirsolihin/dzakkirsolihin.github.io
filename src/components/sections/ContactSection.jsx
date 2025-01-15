@@ -21,9 +21,9 @@ const ContactSection = () => {
     },
     {
       icon: Phone,
-      title: "Phone",
-      value: "+6285161115013",
-      link: "tel:+6285161115013"
+      title: "Phone/WhatsApp",
+      value: "+62 851-6111-5013",
+      link: "https://wa.me/+6285161115013"
     },
     {
       icon: MapPin,

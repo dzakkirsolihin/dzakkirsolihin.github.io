@@ -54,7 +54,7 @@ const SkillSection = () => {
       icon: Code,
       skills: [
         { name: "Laravel", level: 88 },
-        { name: "React.js", level: 50 },
+        { name: "React.js", level: 40 },
         { name: "Node.js", level: 75 },
         { name: "Express.js", level: 65 }
       ]
