@@ -8,29 +8,53 @@ import { getImagePath } from '../../utils/imageUtils';
 const ProjectSection = () => {
   const projects = [
     {
-      title: "Project Title 1",
-      description: "Description of the project goes here. Explain what was built and what technologies were used.",
-      image: "/api/placeholder/400/200",
-      tech: ["React", "Node.js", "MongoDB"],
-      demoLink: "#",
-      codeLink: "#"
+      title: "BSB Website",
+      description: "a company profile website and attendance system according to the needs of the Baitush Sholihin Bandung Foundation.",
+      image: "images/projects/bsb-presensi-guru.png",
+      tech: ["Laravel", "Bootstrap", "MySQL"],
+      // demoLink: "#",
+      codeLink: "https://github.com/dzakkirsolihin/bsb-website"
     },
     {
-      title: "Project Title 2",
-      description: "Another amazing project description. Focus on the problem solved and the impact made.",
-      image: "/api/placeholder/400/200",
-      tech: ["Python", "Django", "PostgreSQL"],
-      demoLink: "#",
-      codeLink: "#"
+      title: "ConnecTrip",
+      description: "The website offers an interactive map for each trip, along with photos of the memories shared during the trip.",
+      image: "images/projects/connectrip-trip-map.png",
+      tech: ["Laravel", "Tailwind", "MySQL"],
+      // demoLink: "#",
+      codeLink: "https://github.com/dzakkirsolihin/ConnecTrip"
     },
     {
-      title: "Project Title 3",
+      title: "PerSeaBlue",
       description: "A third impressive project. Highlight the key features and technical challenges overcome.",
-      image: "/api/placeholder/400/200",
-      tech: ["Vue.js", "Firebase", "Tailwind"],
-      demoLink: "#",
-      codeLink: "#"
-    }
+      image: "images/projects/login-perseablue.png",
+      tech: ["Java", "OOP"],
+      // demoLink: "#",
+      codeLink: "https://github.com/dzakkirsolihin/PerSeaBlue"
+    },
+    {
+      title: "Klasifikasi Tipe Investor",
+      description: "A third impressive project. Highlight the key features and technical challenges overcome.",
+      image: "images/projects/klasifikasi-tipe-investor.png",
+      tech: ["Python", "k-NN algorithm"],
+      // demoLink: "#",
+      codeLink: "https://github.com/dzakkirsolihin/klasifikasi-tipe-investor-kNN"
+    },
+    {
+      title: "Sensus Penduduk",
+      description: "A third impressive project. Highlight the key features and technical challenges overcome.",
+      image: "images/projects/sensus-penduduk.png",
+      tech: ["C++", "Git"],
+      // demoLink: "#",
+      codeLink: "https://github.com/dzakkirsolihin/Sensus-Penduduk"
+    },
+    {
+      title: "UI Design NeuroScan",
+      description: "A third impressive project. Highlight the key features and technical challenges overcome.",
+      image: "images/projects/neuroscan-face-recognition.png",
+      tech: ["Figma"],
+      // demoLink: "#",
+      codeLink: "https://www.figma.com/design/V3uNq5NuUUStNNU9rrWBfU/Design-UI-NeuroScan?node-id=173-1803&t=WvTRrtcY6NwVGuI8-1"
+    },
   ];
 
   return (
@@ -91,13 +115,13 @@ const ProjectSection = () => {
                 </div>
 
                 <div className="flex space-x-4">
-                  <a 
+                  {/* <a 
                     href={project.demoLink} 
                     className="flex items-center text-blue-500 hover:text-blue-400 transition-colors hover:scale-110 transform duration-300"
                   >
                     <ExternalLink className="w-4 h-4 mr-1" />
                     Demo
-                  </a>
+                  </a> */}
                   <a 
                     href={project.codeLink}
                     className="flex items-center text-blue-500 hover:text-blue-400 transition-colors hover:scale-110 transform duration-300"

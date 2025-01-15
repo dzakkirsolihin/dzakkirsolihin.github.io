@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Github, Linkedin, AlertCircle, CheckCircle2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, AlertCircle, CheckCircle2, Instagram } from 'lucide-react';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -30,7 +30,13 @@ const ContactSection = () => {
       title: "Location",
       value: "Bandung City, Indonesia",
       link: "https://maps.app.goo.gl/1ik3YshXfAmJgLtK7"
-    }
+    },
+    {
+      icon: Instagram,
+      title: "Instagram",
+      value: "dzakkirslhn",
+      link: "https://www.instagram.com/dzakkirslhn"
+    },
   ];
 
   const socialLinks = [
