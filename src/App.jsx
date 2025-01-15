@@ -10,6 +10,7 @@ const AboutSection = React.lazy(() => import('./components/sections/AboutSection
 const ProjectSection = React.lazy(() => import('./components/sections/ProjectSection'));
 const SkillSection = React.lazy(() => import('./components/sections/SkillSection'));
 const ContactSection = React.lazy(() => import('./components/sections/ContactSection'));
+const TechSection = React.lazy(() => import('./components/sections/TechSection'));
 
 const SectionLoader = () => (
   <div className="flex justify-center items-center min-h-screen">
@@ -45,6 +46,7 @@ function App() {
             <ProjectSection />
             <SkillSection />
             <ContactSection />
+            <TechSection />
           </Suspense>
         </main>
       </div>

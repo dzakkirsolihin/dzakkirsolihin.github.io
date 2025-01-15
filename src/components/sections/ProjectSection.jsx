@@ -41,7 +41,7 @@ const ProjectSection = () => {
     },
     {
       title: "Sensus Penduduk",
-      description: "C++ program to collect population data.",
+      description: "This Sensus Penduduk project is a program to process population data with a C++ only based program.",
       image: "images/projects/sensus-penduduk.png",
       tech: ["C++", "Git"],
       // demoLink: "#",
